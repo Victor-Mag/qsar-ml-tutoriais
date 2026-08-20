@@ -94,7 +94,5 @@ documentation_notes/ contexto, decisoes e backlog
 ```
 
 ## Licenca
-
-A definir antes da publicacao (sugestao: MIT para o codigo, CC BY 4.0 para o
-material didatico). Os dados de bioatividade sao do ChEMBL e seguem a licenca
+Os dados de bioatividade sao do ChEMBL e seguem a licenca
 CC BY-SA 3.0 da base.
