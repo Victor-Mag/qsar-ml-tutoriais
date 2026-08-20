@@ -1,0 +1,14 @@
+# Dependencias para rodar os notebooks no Google Colab.
+# Uso na primeira celula de cada notebook:
+#   !pip install -q -r https://raw.githubusercontent.com/<usuario>/qsar-ml-tutoriais/main/requirements-colab.txt
+#
+# O Colab ja traz numpy, pandas, scikit-learn, scipy e matplotlib em versoes
+# recentes; listamos mesmo assim para fixar o piso minimo.
+rdkit>=2023.9
+scikit-learn>=1.3
+xgboost>=2.0
+shap>=0.44
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7

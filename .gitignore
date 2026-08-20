@@ -1,0 +1,77 @@
+# Ignora tudo por padrao.
+*
+
+# Fontes, documentacao e notebooks sao versionados.
+!.gitignore
+!.gitkeep
+!**/.gitkeep
+!pyproject.toml
+!requirements-colab.txt
+!*/
+!*.py
+!**/*.py
+!*.md
+!**/*.md
+!*.ipynb
+!**/*.ipynb
+
+# Dados tabulares sao ignorados por padrao...
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.jsonl
+*.parquet
+*.pkl
+*.pickle
+
+# ...EXCETO as amostras curadas do tutorial, que precisam vir no clone
+# para que os notebooks rodem no Colab sem depender da API do ChEMBL.
+# Esta linha tem que vir DEPOIS de "*.csv" (a ultima regra que casa vence).
+!data/tutorial/*.csv
+
+# Dados brutos/intermediarios gerados localmente (nao versionar).
+data/raw/
+data/processed/
+
+# Python cache e ambientes locais.
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Artefatos de build, teste e notebook.
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+build/
+dist/
+*.egg-info/
+
+# Modelos e saidas de experimento (regenerar via notebook; joblib estoura o
+# limite de 100 MB por arquivo do GitHub nos projetos de pesquisa).
+models/
+outputs/
+results/
+reports/
+*.joblib
+*.onnx
+*.h5
+*.pt
+*.pth
+
+# Figuras geradas pelos notebooks ficam nas saidas das celulas, nao no repo.
+*.png
+*.jpg
+*.svg
+
+# Ruido de SO e editor.
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
