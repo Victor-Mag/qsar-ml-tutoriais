@@ -11,16 +11,17 @@ Os notebooks sao executaveis no Google Colab e reprodutiveis a partir de um
 
 ## Os tutoriais
 
-| # | Notebook | Objetivo | Dados |
+| # | Notebook | Objetivo | Abrir no Colab |
 | --- | --- | --- | --- |
-| 1 | [SMILES, RDKit e fingerprints](notebooks/01_smiles_rdkit_fingerprints.ipynb) | Converter estrutura quimica em dado numerico | `moleculas_exemplo.csv`, `antimalarico_classificacao.csv` |
-| 2 | [QSAR de classificacao](notebooks/02_qsar_classificacao.ipynb) | Classificar moleculas como ativas/inativas (antimalarico) | `antimalarico_classificacao.csv` |
-| 3 | [QSAR de regressao com interpretabilidade](notebooks/03_qsar_regressao_interpretabilidade.ipynb) | Predizer pIC50, interpretar com SHAP e delimitar o dominio de aplicabilidade (antituberculosidico) | `tuberculose_regressao.csv` |
+| 1 | [SMILES, RDKit e fingerprints](notebooks/01_smiles_rdkit_fingerprints.ipynb) | Converter estrutura quimica em dado numerico | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Victor-Mag/qsar-ml-tutoriais/blob/main/notebooks/01_smiles_rdkit_fingerprints.ipynb) |
+| 2 | [QSAR de classificacao](notebooks/02_qsar_classificacao.ipynb) | Classificar moleculas como ativas/inativas (antimalarico) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Victor-Mag/qsar-ml-tutoriais/blob/main/notebooks/02_qsar_classificacao.ipynb) |
+| 3 | [QSAR de regressao com interpretabilidade](notebooks/03_qsar_regressao_interpretabilidade.ipynb) | Predizer pIC50, interpretar com SHAP e delimitar o dominio de aplicabilidade (antituberculosidico) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Victor-Mag/qsar-ml-tutoriais/blob/main/notebooks/03_qsar_regressao_interpretabilidade.ipynb) |
 
 A ordem importa: o Tutorial 1 constroi a representacao molecular que os outros
 dois consomem, e o Tutorial 2 introduz o scaffold split que o Tutorial 3 reusa.
 
-Tempo de execucao: ~20 s, ~60 s e ~3 min, respectivamente.
+Tempo de execucao no Colab: menos de 1 min, ~1 min e ~5 min, respectivamente,
+alem de cerca de um minuto de instalacao na primeira celula de cada notebook.
 
 ## Como rodar
 
@@ -28,8 +29,11 @@ Os notebooks sao versionados **com as saidas executadas**: abrindo qualquer um
 dos links acima no GitHub voce ja ve os graficos, as estruturas e as tabelas,
 sem precisar executar nada.
 
-**No Google Colab** — abra o notebook pelo link acima e descomente as tres
-primeiras linhas da celula de setup.
+**No Google Colab** — clique no badge do notebook e rode as celulas na ordem
+(*Ambiente de execucao > Executar tudo*). Nao e preciso editar nada: a primeira
+celula detecta o Colab, clona este repositorio (que ja traz os CSVs) e instala
+as dependencias que faltam. Nenhuma conta alem da do Google e necessaria, e nada
+precisa ser baixado para a sua maquina.
 
 **Localmente:**
 
@@ -87,11 +91,15 @@ substitui validacao experimental.
 ## Estrutura do repositorio
 
 ```
-notebooks/           os tres tutoriais
-data/tutorial/       amostras curadas (versionadas, < 5 MB cada)
-scripts/             geracao das amostras a partir dos datasets de pesquisa
-documentation_notes/ contexto, decisoes e backlog
+notebooks/       os tres tutoriais
+data/tutorial/   amostras curadas (versionadas, < 5 MB cada)
+scripts/         manutencao do repositorio: geracao das amostras e
+                 normalizacao dos notebooks executados
 ```
+
+Os scripts em `scripts/` sao ferramentas de manutencao e dependem de datasets de
+origem que nao estao versionados aqui. Para **rodar os tutoriais** voce nao
+precisa deles: os CSVs necessarios ja vem no repositorio.
 
 ## Licenca
 Os dados de bioatividade sao do ChEMBL e seguem a licenca

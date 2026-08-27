@@ -1,5 +1,9 @@
 """Gera as amostras curadas usadas pelos notebooks dos tutoriais.
 
+Script de manutencao do repositorio: quem so quer **rodar** os tutoriais nao
+precisa dele, porque os CSVs gerados aqui ja vem versionados em `data/tutorial/`.
+Ele depende de datasets de origem que nao estao neste repositorio.
+
 Os projetos de pesquisa (`modelo_classificacao_potencial_antimalarico` e
 `modelo_regressao_potencial_antituberculosico`) mantem `data/` fora do
 versionamento e produzem CSVs grandes demais para um tutorial no Colab. Este
