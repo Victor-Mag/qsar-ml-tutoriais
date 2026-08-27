@@ -1,9 +1,10 @@
 """Normaliza notebooks executados para que o diff do git seja estavel.
 
-Notebooks aqui sao versionados **com as saidas executadas** (ver
-`documentation_notes/02_backlog_e_iteracoes.md`). Isso so funciona se reexecutar
-um notebook sem mudar nada produzir um arquivo identico — caso contrario cada
-execucao gera um diff espurio e o historico vira ruido.
+Notebooks aqui sao versionados **com as saidas executadas**, para que o leitor
+que abre o repositorio no GitHub veja graficos e tabelas sem executar nada. Isso
+so funciona se reexecutar um notebook sem mudar nada produzir um arquivo
+identico — caso contrario cada execucao gera um diff espurio e o historico vira
+ruido.
 
 Duas fontes de instabilidade nao tem a ver com o conteudo:
 

@@ -87,12 +87,22 @@ substitui validacao experimental.
 ## Estrutura do repositorio
 
 ```
-notebooks/           os tres tutoriais
-data/tutorial/       amostras curadas (versionadas, < 5 MB cada)
-scripts/             geracao das amostras a partir dos datasets de pesquisa
-documentation_notes/ contexto, decisoes e backlog
+notebooks/       os tres tutoriais
+data/tutorial/   amostras curadas (versionadas, < 5 MB cada)
+scripts/         geracao das amostras e normalizacao dos notebooks
 ```
 
 ## Licenca
+
+| Parte | Licenca |
+| --- | --- |
+| Codigo (`scripts/`, celulas de codigo dos notebooks) | [MIT](LICENSE) |
+| Material didatico (texto, figuras, README, notas) | [CC BY 4.0](LICENSE-CONTEUDO.md) |
+| Dados em `data/tutorial/` | CC BY-SA 3.0, herdada do ChEMBL |
+
+A licenca dos dados acompanha os dados e nao e alterada pelas outras duas: quem
+redistribuir os arquivos de `data/tutorial/` precisa manter a atribuicao ao
+ChEMBL. Ver [LICENSE-CONTEUDO.md](LICENSE-CONTEUDO.md) para os detalhes e a forma
+de atribuicao.
 Os dados de bioatividade sao do ChEMBL e seguem a licenca
 CC BY-SA 3.0 da base.

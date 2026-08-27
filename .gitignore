@@ -7,6 +7,9 @@
 !**/.gitkeep
 !pyproject.toml
 !requirements-colab.txt
+# LICENSE nao tem extensao, entao precisa de excecao propria — sem ela o
+# whitelist abaixo (que libera por sufixo) o ignora silenciosamente.
+!LICENSE
 !*/
 !*.py
 !**/*.py
@@ -69,6 +72,12 @@ reports/
 *.png
 *.jpg
 *.svg
+
+# Bastidor de desenvolvimento: decisoes internas e orientacao para o agente.
+# Ficam no disco local, fora do repositorio publicado. Estas duas regras vem
+# depois do whitelist de "*.md" acima, entao vencem por serem a ultima a casar.
+CLAUDE.md
+documentation_notes/
 
 # Ruido de SO e editor.
 .DS_Store
