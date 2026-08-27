@@ -104,3 +104,5 @@ A licenca dos dados acompanha os dados e nao e alterada pelas outras duas: quem
 redistribuir os arquivos de `data/tutorial/` precisa manter a atribuicao ao
 ChEMBL. Ver [LICENSE-CONTEUDO.md](LICENSE-CONTEUDO.md) para os detalhes e a forma
 de atribuicao.
+Os dados de bioatividade sao do ChEMBL e seguem a licenca
+CC BY-SA 3.0 da base.
