@@ -34,7 +34,7 @@ primeiras linhas da celula de setup.
 **Localmente:**
 
 ```bash
-git clone https://github.com/<usuario>/qsar-ml-tutoriais.git
+git clone https://github.com/Victor-Mag/qsar-ml-tutoriais.git
 ```
 
 ```bash
